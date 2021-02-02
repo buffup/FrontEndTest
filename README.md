@@ -2,11 +2,11 @@
 
 # The Task:
 
-Create a JS/TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
+Create a TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
 
 ## Requirements:
 
-We now want a JS/Typescript file that allows to display content (Buff's as we call them) over any existing video player.
+We now want a Typescript file that allows to display content (Buff's as we call them) over any existing video player.
 
 The library should have the following features
 
@@ -17,6 +17,7 @@ The library should have the following features
 - If the user votes before the end of the timer (taps on an answer), you should freeze the timer show the right/wrong answer and hide the Buff after 2 seconds.
 - If the timer expires and the user doesn't vote, you should hide the Buff.
 - If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
+- Run `tsc` in the root of the app to compile Typescript into Javascript
 
 ### UI
 
