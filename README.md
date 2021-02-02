@@ -4,7 +4,7 @@
 
 Create a JS/TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
 
-## Explanation:
+## Requirements:
 
 We now want a JS/Typescript file that allows to display content (Buff's as we call them) over any existing video player.
 
@@ -12,6 +12,11 @@ The library should have the following features
 
 - Automatically detect the player frame and put a transparent layer on top of that view that will display our content
 - Handle all the business and UI logic to display the Buffs over the video in the view
+- Using the API endpoints provided, fetch 5 Buffs and display them on top of the video stream displaying only one at a time (Transition in between Buffs is open).
+- The Buff should be displayed with a countdown timer matching the time in the `time_to_show` field for each Buff.
+- If the user votes before the end of the timer (taps on an answer), you should freeze the timer show the right/wrong answer and hide the Buff after 2 seconds.
+- If the timer expires and the user doesn't vote, you should hide the Buff.
+- If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
 
 ### UI
 
@@ -128,14 +133,5 @@ Sample response:
     }
 }
 ```
-
-Using the above URL's to fetch the various Buffs, request the Buffs every 30 seconds (from 1 to 5) and display them over the video stream.
-
-The Buff should be displayed with a countdown timer matching the time in the `time_to_show` field of each Buff.
-If the user votes before the end of the timer (taps on an answer), you should freeze the timer and hide the Buff after 2 seconds.
-
-If the timer expires and the user doesn't vote, you should hide the Buff.
-
-If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
 
 Good luck!
