@@ -2,84 +2,61 @@
 
 # The Task:
 
-Create a JS/TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
+Create a TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
 
+## Requirements:
 
-
-## Part A: HTML Player
-
-Create a simple HTML page, that hosts a video stream (**use this URL**: https://buffup-public.s3.eu-west-2.amazonaws.com/video/toronto+nba+cut+3.mp4) in any HTML5 video player you want.
-
-Import the npm package for the library that you have created in Part B, to display content on top of that player
-
-## Part B: Web Library
-
-We now want a JS/Typescript library distributed as an npm package, that allows to display content (Buff's as we call them) over any existing video player.
-
-The Developer using our library should import our library and initialize it with the ID of the player.
-
-The library then should locate the HTML player frame, and render on top of that HTML content (our Buffs)
-
-### Library Requirements
+We now want a Typescript file that allows to display content (Buff's as we call them) over any existing video player.
 
 The library should have the following features
 
 - Automatically detect the player frame and put a transparent layer on top of that view that will display our content
 - Handle all the business and UI logic to display the Buffs over the video in the view
+- Using the API endpoints provided, fetch 5 Buffs and display them on top of the video stream displaying only one at a time (Transition in between Buffs is open).
+- The Buff should be displayed with a countdown timer matching the time in the `time_to_show` field for each Buff.
+- If the user votes before the end of the timer (taps on an answer), you should freeze the timer show the right/wrong answer and hide the Buff after 2 seconds.
+- If the timer expires and the user doesn't vote, you should hide the Buff.
+- If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
+- Run `tsc` in the root of the app to compile Typescript into Javascript
 
-### Buff UI
+### UI
 
-The Buff UI should look like this:
+The UI should look like this:
 
 ![Buff](Buff.png)
-
-The UI has 3 sections:
-
-- Top Section that displays the Questions Sender Name and Image
-- Middle section where we see the question and the countdown timer
-- Bottom Section where we see the answers
 
 - [ ] The countdown timer should work and at the end if the user hasn't yet voted, the question should automatically hide
 
 - [ ] The number of answers can vary from 2 to 5, your UI should automatically adapt to the number of answers that the API delivers
 
-- [ ] If the user selects an answer, the timer should stop and you should hide the Buff after 2 seconds. You should also highlight the selected answer.
-
-
-***The UI for this screen with the downloadable assets can be found here:***
-
-https://xd.adobe.com/view/763a1597-da0c-4b42-6fb9-73d5666aef52-000b/
-
-##### A sample video of the Buffs showing on the current iOS version can be seen here:
-
-https://github.com/buffup/AndroidTechTest/blob/master/Buff.mov?raw=true
-
+- [ ] When the user selects an answer, the correct answer should be highlighted letting the user if they got it right (UI of your choice)
 
 ## What we are looking for:
 
-- A demo website that hosts the video player and the  Javascript/Typescript library  
+- A demo page with the video player and the Javascript/Typescript file.
 - Demonstration of coding style and design patterns.
 - Error handling.
 - Any form of unit testing you see fit.
+- Use the design provided as a guidance, we are not expecting a pixel perfect solution.
 
 ## How to Submit your solution:
 
 - Clone this repository
-- Create a public repo in github, bitbucket or a suitable alternative and provide a link to the repository.
-- Provide a readme in markdown which details your code and any libraries that you may have used
+- Create a repo in github, bitbucket or a suitable alternative and provide a link to the repository.
+- Provide a readme in markdown which details of your code and any libraries that you may have used (feel free to use any libraries you see fit)
 - Explain how we should test the solution
 
 ## API Usage
 
-This a brief summary of the api endpoints you will need in order to create the library. There a lot of other additional properties from the json responses that are not relevant, but you must use these endpoints to retrieve the information needed for this task.
+This is a brief summary of the api endpoints you will need in order to create the library. Reaching the endpoint shown below you should be able to get a json response with all the information needed for this task. Feel free to add any extra information in the UI you see relevant.
 
 #### Base URL
 
 The base URL is `http://demo2373134.mockable.io/`
 
-#### Get  Buff
+#### Get Buff
 
-Gets the data for the Buff to show
+Gets the data to show the Buff
 
 ```
 GET /buff/:buffId
@@ -157,16 +134,5 @@ Sample response:
     }
 }
 ```
-
-Using the above URL's to fetch the various Buffs, request the Buffs every 30 seconds (from 1 to 5) and display them over the video stream.
-
-The Buff should be displayed with a countdown timer matching the time in the `time_to_show` field of each Buff.
-If the user votes before the end of the timer (taps on an answer), you should freeze the timer and hide the Buff after 2 seconds.
-
-If the timer expires and the user doesn't vote, you should hide the Buff.
-
-If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
-
-
 
 Good luck!

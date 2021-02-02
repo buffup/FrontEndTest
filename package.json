@@ -1,0 +1,12 @@
+{
+  "name": "frontendtest",
+  "version": "1.0.0",
+  "description": "Sport Buff Frontend test",
+  "main": "index.js",
+  "repository": "https://github.com/buffup/FrontEndTest.git",
+  "author": "Joan Miquel <joanme87@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
