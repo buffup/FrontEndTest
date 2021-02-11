@@ -1,4 +1,4 @@
-# Buff UP LTD JS/TypeScript Dev. Test
+# Buff UP LTD React Dev. Test
 
 # The Task:
 
