@@ -2,7 +2,7 @@
 
 # The Task:
 
-Display our `Buff` component as an overlay of the video HTML element.
+Display our `Buff` component as an overlay on the video HTML element.
 
 Using the API link provided, you should replace the information contained in the provided `Buff` component with real data.
 
@@ -10,11 +10,11 @@ Build a `TimeInput` component that outputs the following format `mm:ss`. Add a f
 
 ### UI
 
-The Buff component and the video component should look like this:
+The `Buff` component should look like this
 
 ![Buff](Buff.png)
 
-The Time input component should look like this
+The `TimeInput` component should look like this
 
 ![TimeInput](TimeInput.png)
 
@@ -37,7 +37,7 @@ This is a brief summary of the api endpoints you will need in order to create th
 
 #### Base URL
 
-The base URL is `http://demo2373134.mockable.io/`
+The base URL is `https://demo2373134.mockable.io/`
 
 #### Get Buff
 
