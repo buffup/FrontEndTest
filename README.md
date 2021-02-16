@@ -1,50 +1,35 @@
-# Buff UP LTD JS/TypeScript Dev. Test
+# Buff UP LTD React Dev. Test
 
 # The Task:
 
-Create a TypeScript library using our Rest API to show content of top of an HTML 5 Video Player
+Display our `Buff` component as an overlay of the video HTML element.
 
-## Requirements:
+Using the API link provided, you should replace the information contained in the provided `Buff` component with real data.
 
-We now want a Typescript file that allows to display content (Buff's as we call them) over any existing video player.
-
-The library should have the following features
-
-- Automatically detect the player frame and put a transparent layer on top of that view that will display our content
-- Handle all the business and UI logic to display the Buffs over the video in the view
-- Using the API endpoints provided, fetch 5 Buffs and display them on top of the video stream displaying only one at a time (Transition in between Buffs is open).
-- The Buff should be displayed with a countdown timer matching the time in the `time_to_show` field for each Buff.
-- If the user votes before the end of the timer (taps on an answer), you should freeze the timer show the right/wrong answer and hide the Buff after 2 seconds.
-- If the timer expires and the user doesn't vote, you should hide the Buff.
-- If the user manually closes the Buff by tapping on the top right `x` close button, you should hide the Buff.
-- Run `tsc` in the root of the app to compile Typescript into Javascript
+Build a `TimeInput` component that outputs the following format `mm:ss`. Add a form to `App.js` using the new `TimeInput` component and a submit button. The output of this form should define the countdown for our `Buff`. The minimum time allowed to answer should be 5 seconds `00:05` and the maximum is 2 minutes `02:00`
 
 ### UI
 
-The UI should look like this:
+The Buff component and the video component should look like this:
 
 ![Buff](Buff.png)
 
+The Time input component should look like this
+
+![TimeInput](TimeInput.png)
+
 - [ ] The countdown timer should work and at the end if the user hasn't yet voted, the question should automatically hide
 
-- [ ] The number of answers can vary from 2 to 5, your UI should automatically adapt to the number of answers that the API delivers
+- [ ] We should be able to select different times according to the restrictions and that should reflect on the countdown timer.
 
-- [ ] When the user selects an answer, the correct answer should be highlighted letting the user if they got it right (UI of your choice)
+- [ ] When the user selects an answer, the correct answer should be highlighted letting the user know if they got it right (UI of your choice)
 
 ## What we are looking for:
 
-- A demo page with the video player and the Javascript/Typescript file.
 - Demonstration of coding style and design patterns.
 - Error handling.
 - Any form of unit testing you see fit.
 - Use the design provided as a guidance, we are not expecting a pixel perfect solution.
-
-## How to Submit your solution:
-
-- Clone this repository
-- Create a repo in github, bitbucket or a suitable alternative and provide a link to the repository.
-- Provide a readme in markdown which details of your code and any libraries that you may have used (feel free to use any libraries you see fit)
-- Explain how we should test the solution
 
 ## API Usage
 
@@ -60,9 +45,8 @@ Gets the data to show the Buff
 
 ```
 GET /buff/:buffId
-
 Buff Id is the id of the buff to fetch
-In the sample Rest API Buffs with Id's 1 to 5 are available
+Id's from 1 to 5 are available
 ```
 
 Sample response:
@@ -134,5 +118,12 @@ Sample response:
     }
 }
 ```
+
+## How to Submit your solution:
+
+- Clone this repository
+- Create a repo in github, bitbucket or a suitable alternative and provide a link to the repository.
+- Provide a readme in markdown which details of your code and any libraries that you may have used (feel free to use any libraries you see fit)
+- Explain how we should test the solution
 
 Good luck!
