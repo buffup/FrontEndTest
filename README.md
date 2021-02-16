@@ -6,7 +6,7 @@ Display our `Buff` component as an overlay of the video HTML element.
 
 Using the API link provided, you should replace the information contained in the provided `Buff` component with real data.
 
-Build a TimeInput component with the following format `mm:ss` which will define the countdown in our Buff component and a submit button. The minimum time allowed to answer should be 5 seconds `00:05` and the maximum is 2 minutes `02:00`
+Build a `TimeInput` component that outputs the following format `mm:ss`. Add a form to `App.js` using the new `TimeInput` component and a submit button. The output of this form should define the countdown for our `Buff`. The minimum time allowed to answer should be 5 seconds `00:05` and the maximum is 2 minutes `02:00`
 
 ### UI
 
