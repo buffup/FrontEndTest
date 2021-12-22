@@ -37,16 +37,16 @@ This is a brief summary of the api endpoints you will need in order to create th
 
 #### Base URL
 
-The base URL is `https://demo2373134.mockable.io/`
+The base URL is `http://demo8702738.mockable.io`
 
 #### Get Buff
 
 Gets the data to show the Buff
 
 ```
-GET /buff/:buffId
+GET /:buffId
 Buff Id is the id of the buff to fetch
-Id's from 1 to 5 are available
+Id's from 1 to 2 are available
 ```
 
 Sample response:
